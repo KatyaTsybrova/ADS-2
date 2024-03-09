@@ -5,7 +5,7 @@
 
 double pown(double value, uint16_t n) {
   double result = 1.0;
-  for (uint16_t i = 0; i < n; ++i) {
+  for (uint16_t i = 0; i <= n; ++i) {
     result *= value;
   }
   return result;
@@ -25,7 +25,7 @@ double calcItem(double x, uint16_t n) {
 
 double expn(double x, uint16_t count) {
   double sum = 0.0;
-  for (uint16_t i = 0; i < count; ++i) {
+  for (uint16_t i = 0; i <= count; ++i) {
     sum += calcItem(x, i);
   }
   return sum;
@@ -33,7 +33,7 @@ double expn(double x, uint16_t count) {
 
 double sinn(double x, uint16_t count) {
   double sum = 0.0;
-  for (uint16_t i = 0; i < count; ++i) {
+  for (uint16_t i = 0; i <= count; ++i) {
     sum += pown(-1.0, i) * calcItem(x, 2 * i + 1);
   }
   return sum;
@@ -41,7 +41,7 @@ double sinn(double x, uint16_t count) {
 
 double cosn(double x, uint16_t count) {
   double sum = 0.0;
-  for (uint16_t i = 0; i < count; ++i) {
+  for (uint16_t i = 0; i <= count; ++i) {
     sum += pown(-1.0, i) * calcItem(x, 2 * i);
   }
   return sum;
